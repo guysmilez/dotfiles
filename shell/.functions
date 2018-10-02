@@ -15,7 +15,7 @@ function tp() {
     t -v -r today all
 }
 
-function tcommit() {
+function ttodaycommit() {
     t today all -v -r -f tempo
 }
 
