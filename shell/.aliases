@@ -1,0 +1,23 @@
+# Generic...
+alias weather='curl -s wttr.in | sed -n "1,7p"'
+alias lsop="sudo lsof -PiTCP -sTCP:LISTEN"
+alias vdc="sudo killall VDCAssistant"
+
+# IP addresses...
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# Lock the screen...
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Tool replacements...
+alias cat=bat
+alias ping='prettyping --nolegend'
+
+# PHP/coding...
+alias mfs='php artisan migrate:fresh --seed'
+alias nah='git reset --hard;git clean -df'
+
+# Docker Laravel shortcuts...
+alias dla="dce app php artisan"
+alias dlt="dce app env AWS_PREFIX=testing/assets vendor/bin/phpunit"

@@ -1,0 +1,34 @@
+# Timetrap functions...
+
+function ts() {
+    t out
+    t s $1
+    shift
+    t in $@
+}
+
+function tt() {
+    t -v today all
+}
+
+function tp() {
+    t -v -r today all
+}
+
+function tcommit() {
+    t today all -v -r -f tempo
+}
+
+function tcommit() {
+    t display --start "$1" --end "$1" all -v -r -f tempo
+}
+
+function tyesterdaycommit() {
+    t yesterday all -v -r -f tempo
+}
+
+# Generic...
+
+function anybar {
+    echo -n $1 | nc -4u -w0 localhost ${2:-1738};
+}
