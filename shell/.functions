@@ -27,6 +27,21 @@ function tyesterdaycommit() {
     t yesterday all -v -r -f tempo
 }
 
+# Kubernetes...
+
+function ktoken() {
+    kubectl describe secret -n kube-system $(kubectl get secrets -n kube-system | grep default | cut -f1 -d ' ') | grep -E '^token' | cut -f2 -d':' | tr -d '\t' | tr -d " "
+}
+
+function kapiurl() {
+    kubectl config view | grep https | cut -f 2- -d ":" | tr -d " "
+}
+
+function mkup {
+    mk start --cache-images=true
+}
+
+
 # Generic...
 
 function anybar {

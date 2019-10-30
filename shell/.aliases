@@ -6,6 +6,7 @@ alias vdc="sudo killall VDCAssistant"
 # IP addresses...
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+alias open_network="lsof -i | grep -E '(LISTEN|ESTABLISHED)'"
 
 # Lock the screen...
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
@@ -21,3 +22,13 @@ alias nah='git reset --hard;git clean -df'
 # Docker Laravel shortcuts...
 alias dla="dce app php artisan"
 alias dlt="dce app env AWS_PREFIX=testing/assets vendor/bin/phpunit"
+alias clean_images="docker rmi '$(docker images -q -f dangling=true)'"
+
+
+# Kubernetes...
+alias mk="minikube"
+alias kc="kubectx"
+alias kn="kubens"
+alias kg="k get"
+alias kla="kl --all-containers"
+alias kla="kla -f"
