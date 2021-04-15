@@ -26,6 +26,10 @@ php -r "unlink('composer-setup.php');"
 echo 'move composer to /usr/local/bin/composer'
 mv -f composer.phar /usr/local/bin/composer
 
+echo 'Fix proxy icons: see https://brettterpstra.com/2021/04/14/fixing-the-big-sur-proxy-icon-delay-globally/'
+echo '-------------------------------------------------------------------------------------------------------'
+defaults write -g NSToolbarTitleViewRolloverDelay -float 0
+
 echo 'Install homebrew'
 echo '----------------'
 echo install homebrew

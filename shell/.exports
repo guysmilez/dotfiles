@@ -4,7 +4,6 @@ export PATH="$(brew --prefix php@7.4)/bin:$PATH" # Add Homebrew PHP
 export PATH="$HOME/.composer/vendor/bin:$PATH" # Add Composer bin
 export PATH="vendor/bin:$PATH" # Add local project Composer bin
 export PATH="./node_modules/.bin:$PATH" # Add Node modules local bin
-export PATH="$HOME/go/bin:$PATH"
 
 # Xdebug...
 export XDEBUG_CONFIG="idekey=VSCODE"
@@ -16,6 +15,13 @@ export AWS_DEFAULT_REGION=us-east-1
 
 # Editor...
 export EDITOR="/usr/local/bin/code"
+
+# Java...
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Go...
+export GOPATH="$HOME/Code/go"
+export PATH="$HOME/Code/go/bin:$PATH"
 
 ###
 
