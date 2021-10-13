@@ -20,6 +20,7 @@ alias mfs='php artisan migrate:fresh --seed'
 alias nah='git reset --hard;git clean -df'
 
 # Docker Laravel shortcuts...
+alias dstats="docker stats $(docker ps | awk '{if(NR>1) print $NF}')"
 alias dla="dce app php artisan"
 alias dlt="dce app env AWS_PREFIX=testing/assets vendor/bin/phpunit"
 alias clean_images="docker rmi '$(docker images -q -f dangling=true)'"
@@ -32,3 +33,8 @@ alias kn="kubens"
 alias kg="k get"
 alias kla="kl --all-containers"
 alias klaf="kla -f"
+
+# Slack...
+alias s="~/Code/bin/slack"
+alias sa="~/Code/bin/slack presence away --filter \".ok\" && ~/Code/bin/slack status edit \"$@\""
+alias sb="~/Code/bin/slack presence active --filter \".ok\" && ~/Code/bin/slack status clear --filter \".ok\""

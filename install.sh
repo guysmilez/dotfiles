@@ -12,25 +12,33 @@ curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/in
 rm $HOME/.zshrc
 ln -s $SOURCEPATH/shell/.zshrc $HOME/.zshrc
 
+echo 'Install powerlevel10k theme'
+echo '---------------------------'
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
 echo 'Install composer'
 echo '----------------'
 cd $SOURCEPATH
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('SHA384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 echo 'move composer to /usr/local/bin/composer'
 mv -f composer.phar /usr/local/bin/composer
 
+echo 'Fix proxy icons: see https://brettterpstra.com/2021/04/14/fixing-the-big-sur-proxy-icon-delay-globally/'
+echo '-------------------------------------------------------------------------------------------------------'
+defaults write -g NSToolbarTitleViewRolloverDelay -float 0
+
 echo 'Install homebrew'
 echo '----------------'
 echo install homebrew
 sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 echo 'Install node'
 echo '-----------'
-brew install node@8
+brew install node
 
 echo 'Install bat'
 echo '-----------'
@@ -39,6 +47,10 @@ brew install bat
 echo 'Install tldr'
 echo '------------'
 brew install tldr
+
+echo 'Install autojump'
+echo '----------------'
+brew install autojump
 
 echo 'Install pkg-config'
 echo '------------------'
@@ -50,7 +62,7 @@ brew install prettyping
 
 echo 'Install wget'
 echo '------------'
-brew install wget --overwrite
+brew install wget
 
 echo 'Install httpie'
 echo '--------------'
@@ -68,10 +80,17 @@ echo 'Install ag'
 echo '----------'
 brew install the_silver_searcher
 
+echo 'Install ripgrep'
+echo '---------------'
+brew install ripgrep
+
+echo 'Install tmux'
+echo '------------'
+brew install tmux
 
 echo 'Install brew-cask'
 echo '-----------------'
-brew tap caskroom/cask
+brew tap homebrew/cask
 brew install brew-cask
 
 echo 'Install some nice quicklook plugins'
@@ -80,7 +99,7 @@ brew cask install --force qlcolorcode qlstephen qlmarkdown quicklook-json qlpret
 
 echo 'Install php'
 echo '-----------'
-brew install php@7.2
+brew install php@7.4
 
 echo 'Install imagemagick'
 echo '-------------------'
@@ -97,11 +116,6 @@ pecl install memcached
 echo 'Install xdebug'
 echo '--------------'
 pecl install xdebug
-
-echo 'Install redis'
-echo '-------------'
-pecl install redis
-
 
 echo 'Install php-cs-fixer'
 echo '--------------------'
@@ -122,8 +136,8 @@ valet install
 
 echo 'Install mysql'
 echo '-------------'
-brew install mysql@5.7
-brew services start mysql@5.7
+brew install mysql
+brew services start mysql
 
 echo 'Install yarn'
 echo '------------'
@@ -132,6 +146,10 @@ brew install yarn
 echo 'Install mackup'
 echo '--------------'
 brew install mackup
+
+echo 'Install fzf'
+echo '--------------'
+brew install fzf
 
 echo 'Install zsh-autosuggestions'
 echo '---------------------------'
