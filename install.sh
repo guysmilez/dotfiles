@@ -88,14 +88,26 @@ echo 'Install tmux'
 echo '------------'
 brew install tmux
 
-echo 'Install brew-cask'
-echo '-----------------'
-brew tap homebrew/cask
-brew install brew-cask
+echo 'Install mackup'
+echo '--------------'
+brew install mackup
+
+echo 'Install fzf'
+echo '--------------'
+brew install fzf
+
+echo 'Install zsh-autosuggestions'
+echo '---------------------------'
+brew install zsh-autosuggestions
 
 echo 'Install some nice quicklook plugins'
 echo '-----------------------------------'
-brew cask install --force qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
+brew install --force qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package
+
+echo '+++++++++++++++++++++++++++++++++++++'
+echo '++ INSTALLING DEVELOPER TOOLS      ++'
+echo '+++++++++++++++++++++++++++++++++++++'
+echo ''
 
 echo 'Install php'
 echo '-----------'
@@ -143,17 +155,6 @@ echo 'Install yarn'
 echo '------------'
 brew install yarn
 
-echo 'Install mackup'
-echo '--------------'
-brew install mackup
-
-echo 'Install fzf'
-echo '--------------'
-brew install fzf
-
-echo 'Install zsh-autosuggestions'
-echo '---------------------------'
-brew install zsh-autosuggestions
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
