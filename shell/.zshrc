@@ -17,43 +17,40 @@ BASE=$HOME/Code/dotfiles
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
-#ZSH_THEME="powerlevel9k/powerlevel9k"
-# SPACESHIP_PROMPT_ORDER=(
-# 	time
-# 	user
-# 	dir
-# 	host
-# 	git
-# 	package
-# 	node
-# 	ruby
-# 	php
-# 	docker
-# 	aws
-# 	venv
-# 	conda
-# 	pyenv
-# 	kubecontext
-# 	exec_time
-# 	line_sep
-# 	battery
-# 	vi_mode
-# 	jobs
-# 	exit_code
-# 	char
-# )
-# SPACESHIP_TIME_SHOW=true
-# SPACESHIP_EXIT_CODE_SHOW=true
-# SPACESHIP_CHAR_SUFFIX=" "
-
 # Hide username in prompt
 DEFAULT_USER=$(whoami)
+
+# nvm autoload...
+# zstyle ':omz:plugins:nvm' autoload yes
+# zstyle ':omz:plugins:nvm' lazy yes
+# zstyle ':omz:plugins:nvm' lazy-cmd eslint vitest
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump brew composer docker docker-compose extract fzf git history osx vscode)
+plugins=(
+  asdf
+  autojump
+  aws
+  brew
+  composer
+  direnv
+  docker
+  docker-compose
+  extract
+  fzf
+  gh
+  git
+  gpg-agent
+  history
+  macos
+  nvm
+  pre-commit
+  terraform
+  tmux
+  vscode
+  zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -65,9 +62,17 @@ done
 unset file
 
 # Import ssh keys in keychain
+export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
 ssh-add -A 2>/dev/null;
 
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+[[ -f ~/.fzf.zsh ]]  && source ~/.fzf.zsh
+
+# Keys, etc...
+source $BASE/shell/.locals
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"

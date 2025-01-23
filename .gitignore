@@ -1,1 +1,4 @@
 .DS_Store
+.locals
+vscode
+bin/jira

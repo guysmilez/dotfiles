@@ -98,7 +98,8 @@ brew install fzf
 
 echo 'Install zsh-autosuggestions'
 echo '---------------------------'
-brew install zsh-autosuggestions
+brew install zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 echo 'Install some nice quicklook plugins'
 echo '-----------------------------------'
@@ -155,6 +156,20 @@ echo 'Install yarn'
 echo '------------'
 brew install yarn
 
+echo 'Install direnv'
+echo '--------------'
+brew install direnv
+
+echo 'Install stats'
+echo '-------------'
+brew install stats
+
+echo 'Install jira-cli'
+echo '----------------'
+curl -O https://github.com/ankitpokhrel/jira-cli/releases/download/v1.5.2/jira_1.5.2_macOS_arm64.tar.gz \
+  && tar -zxvf jira_1.5.2_macOS_arm64.tar.gz \
+  && mv jira /usr/local/bin/jira \
+  && rm jira_1.5.2_macOS_arm64.tar.gz
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'

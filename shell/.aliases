@@ -12,6 +12,7 @@ alias open_network="lsof -i | grep -E '(LISTEN|ESTABLISHED)'"
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # Tool replacements...
+alias ag=rg
 alias cat=bat
 alias ping='prettyping --nolegend'
 

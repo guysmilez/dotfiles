@@ -1,6 +1,5 @@
 # Path...
-export PATH="$(brew --prefix php@7.4)/bin:$PATH" # Add Homebrew PHP
-export PATH="$HOME/.composer/vendor/bin:$PATH" # Add Composer bin
+export PATH="/opt/homebrew/opt/curl/bin:$PATH" # Custom curl...
 export PATH="vendor/bin:$PATH" # Add local project Composer bin
 export PATH="./node_modules/.bin:$PATH" # Add Node modules local bin
 export PATH="$PATH:$HOME/go/bin" # Golang bin
@@ -9,11 +8,6 @@ export PATH="$HOME/Code/bin:$PATH"
 
 # Xdebug...
 export XDEBUG_CONFIG="idekey=VSCODE"
-
-# AWS EC2 tools...
-export EC2_HOME=~/bin/ec2-api-tools
-export EC2_URL=https://ec2.us-east-1.amazonaws.com
-export AWS_DEFAULT_REGION=us-east-1
 
 # Editor...
 export EDITOR="/usr/local/bin/code -w -n"
