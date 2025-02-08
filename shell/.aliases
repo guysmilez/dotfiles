@@ -39,3 +39,6 @@ alias klaf="kla -f"
 alias s="~/Code/bin/slack"
 alias sa="~/Code/bin/slack presence away --filter \".ok\" && ~/Code/bin/slack status edit \"$@\""
 alias sb="~/Code/bin/slack presence active --filter \".ok\" && ~/Code/bin/slack status clear --filter \".ok\""
+
+# Hledger...
+alias h="hledger"
