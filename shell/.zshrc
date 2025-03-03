@@ -76,3 +76,8 @@ source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-se
 # Keys, etc...
 source $BASE/shell/.locals
 source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+
+# append completions to fpath
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
