@@ -5,7 +5,7 @@ export PATH="./node_modules/.bin:$PATH" # Add Node modules local bin
 export PATH="$PATH:$HOME/go/bin" # Golang bin
 export PATH="$PATH:$HOME/Code/dotfiles/bin" # Local files
 export PATH="$HOME/Code/bin:$PATH"
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH" # asdf shims
 
 # Xdebug...
 export XDEBUG_CONFIG="idekey=VSCODE"

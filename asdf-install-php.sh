@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSIONS=(8.3.16 8.4.3)
+VERSIONS=(8.3.16 8.4.4)
 
 for version in ${VERSIONS[@]}; do
   PATH="$(brew --prefix bison)/bin:$(brew --prefix icu4c)/bin:$(brew --prefix icu4c)/sbin:$PATH" \
