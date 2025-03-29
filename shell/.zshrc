@@ -66,8 +66,8 @@ export GPG_TTY=$(tty)
 gpgconf --launch gpg-agent
 ssh-add -A 2>/dev/null;
 
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh

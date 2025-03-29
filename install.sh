@@ -45,10 +45,6 @@ echo install homebrew
 sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-echo 'Install node'
-echo '-----------'
-brew install node
-
 echo 'Install bat'
 echo '-----------'
 brew install bat
@@ -81,14 +77,6 @@ echo 'Install ncdu'
 echo '------------'
 brew install ncdu
 
-echo 'Install hub'
-echo '-----------'
-brew install hub
-
-echo 'Install ag'
-echo '----------'
-brew install the_silver_searcher
-
 echo 'Install ripgrep'
 echo '---------------'
 brew install ripgrep
@@ -96,10 +84,6 @@ brew install ripgrep
 echo 'Install tmux'
 echo '------------'
 brew install tmux
-
-echo 'Install mackup'
-echo '--------------'
-brew install mackup
 
 echo 'Install fzf'
 echo '--------------'
@@ -114,75 +98,36 @@ echo 'Install some nice quicklook plugins'
 echo '-----------------------------------'
 brew install --force qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package
 
-echo '+++++++++++++++++++++++++++++++++++++'
-echo '++ INSTALLING DEVELOPER TOOLS      ++'
-echo '+++++++++++++++++++++++++++++++++++++'
-echo ''
-
-echo 'Install php'
-echo '-----------'
-brew install php@7.4
-
-echo 'Install imagemagick'
-echo '-------------------'
-brew install imagemagick
-
-echo 'Install imagick'
-echo '---------------'
-pecl install imagick
-
-echo 'Install memcached'
+echo 'Install 1Password'
 echo '-----------------'
-pecl install memcached
-
-echo 'Install xdebug'
-echo '--------------'
-pecl install xdebug
-
-echo 'Install php-cs-fixer'
-echo '--------------------'
-composer global require friendsofphp/php-cs-fixer
-
-echo 'Install phpunit-watcher'
-echo '---------------------'
-composer global require spatie/phpunit-watcher
-
-echo 'Install mixed-content-scanner-cli'
-echo '---------------------------------'
-composer global require spatie/mixed-content-scanner-cli
-
-echo 'Install laravel valet'
-echo '---------------------'
-composer global require laravel/valet
-valet install
-
-echo 'Install mysql'
-echo '-------------'
-brew install mysql
-brew services start mysql
-
-echo 'Install yarn'
-echo '------------'
-brew install yarn
-
-echo 'Install direnv'
-echo '--------------'
-brew install direnv
+brew install --cask 1password
 
 echo 'Install stats'
 echo '-------------'
 brew install stats
 
-echo 'Install jira-cli'
-echo '----------------'
-curl -O https://github.com/ankitpokhrel/jira-cli/releases/download/v1.5.2/jira_1.5.2_macOS_arm64.tar.gz \
-  && tar -zxvf jira_1.5.2_macOS_arm64.tar.gz \
-  && mv jira /usr/local/bin/jira \
-  && rm jira_1.5.2_macOS_arm64.tar.gz
+echo 'Install Visual Studio Code'
+echo '--------------------------'
+brew install --cask visual-studio-code
 
+echo 'Set hot corners'
+echo '---------------'
+defaults write com.apple.dock wvous-tl-corner -int 2 # Top left: Mission Control
+defaults write com.apple.dock wvous-tr-corner -int 3 # Top right: Application Windows
+defaults write com.apple.dock wvous-bl-corner -int 4 # Bottom left: Desktop
+defaults write com.apple.dock wvous-br-corner -int 4 # Bottom right: Desktop
+
+echo 'Update keyboard settings'
+echo '------------------------'
+defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write -g InitialKeyRepeat -int 12
+defaults write -g KeyRepeat -int 2
 
 echo 'Restart'
+echo '-------'
+
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+killall Dock
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
