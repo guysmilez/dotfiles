@@ -779,13 +779,13 @@
   typeset -g POWERLEVEL9K_NIX_SHELL_FOREGROUND=74
 
   # Display the icon of nix_shell if PATH contains a subdirectory of /nix/store.
-  # typeset -g POWERLEVEL9K_NIX_SHELL_INFER_FROM_PATH=false
+  typeset -g POWERLEVEL9K_NIX_SHELL_INFER_FROM_PATH=true
 
   # Tip: If you want to see just the icon without "pure" and "impure", uncomment the next line.
   # typeset -g POWERLEVEL9K_NIX_SHELL_CONTENT_EXPANSION=
 
   # Custom icon.
-  # typeset -g POWERLEVEL9K_NIX_SHELL_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_NIX_SHELL_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
   ##################[ chezmoi_shell: chezmoi shell (https://www.chezmoi.io/) ]##################
   # chezmoi shell color.
