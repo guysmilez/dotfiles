@@ -10,6 +10,7 @@ export PATH="$PATH:$HOME/go/bin" # Golang bin
 export PATH="$PATH:$HOME/.rbenv/bin" # rbenv bin for Ruby
 export PATH="$PATH:$HOME/Code/dotfiles/bin" # Local files
 export PATH="$HOME/Code/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Xdebug...

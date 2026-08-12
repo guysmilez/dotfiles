@@ -91,3 +91,4 @@ source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 # # initialise completions with ZSH's compinit
 # autoload -Uz compinit && compinit
 #eval "$(rbenv init -)"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
