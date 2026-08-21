@@ -12,6 +12,8 @@ export PATH="$PATH:$HOME/Code/dotfiles/bin" # Local files
 export PATH="$HOME/Code/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export PATH=/Users/markhorlbeck/.grok/bin:$PATH
 
 # Xdebug...
 export XDEBUG_CONFIG="idekey=VSCODE"
@@ -19,9 +21,7 @@ export XDEBUG_CONFIG="idekey=VSCODE"
 # Editor...
 export EDITOR="/usr/local/bin/code -w -n"
 
-###
-
-# Term...
+# Terminal...
 export TERM="xterm-256color"
 
 # Prefer US English and use UTF-8...
