@@ -1,6 +1,8 @@
 #!/bin/bash
 
 SOURCEPATH="$HOME/Code/dotfiles"
+BREW_APPS=(autojump bat direnv fzf httpie mole ncdu oh-my-posh pkg-config prettyping ripgrep stats tmux zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
+BREW_CASKS=(font-0xproto-nerd-font bettercmdtab devutils ghostty openlogi scroll-reverser tinycast)
 
 # Install zsh
 echo 'Install oh-my-zsh'
@@ -35,82 +37,14 @@ echo install homebrew
 sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup 2>/dev/null
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-echo 'Install bat'
-echo '-----------'
-brew install bat
-
-echo 'Install tldr'
-echo '------------'
-brew install tldr
-
-echo 'Install autojump'
-echo '----------------'
-brew install autojump
-
-echo 'Install pkg-config'
-echo '------------------'
-brew install pkg-config
-
-echo 'Install prettyping'
-echo '------------------'
-brew install prettyping
-
-echo 'Install wget'
-echo '------------'
-brew install wget
-
-echo 'Install httpie'
-echo '--------------'
-brew install httpie
-
-echo 'Install ncdu'
-echo '------------'
-brew install ncdu
-
-echo 'Install hub'
-echo '-----------'
-brew install hub
-
-echo 'Install ag'
-echo '----------'
-brew install the_silver_searcher
-
-echo 'Install ripgrep'
-echo '---------------'
-brew install ripgrep
-
-echo 'Install tmux'
-echo '------------'
-brew install tmux
-
-echo 'Install mackup'
-echo '--------------'
-brew install mackup
-
-echo 'Install fzf'
-echo '--------------'
-brew install fzf
-
-echo 'Install zsh-autosuggestions'
-echo '---------------------------'
-brew install zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search
+# Install Homebrew apps...
+brew install "${BREW_APPS[@]}"
+brew install --cask "${BREW_CASKS[@]}"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 echo 'Install some nice quicklook plugins'
 echo '-----------------------------------'
 brew install --force qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package
-
-echo '+++++++++++++++++++++++++++++++++++++'
-echo '++ INSTALLING DEVELOPER TOOLS      ++'
-echo '+++++++++++++++++++++++++++++++++++++'
-echo ''
-
-echo '--------------'
-brew install direnv
-
-echo 'Install stats'
-echo '-------------'
-brew install stats
 
 echo 'Install jira-cli'
 echo '----------------'
@@ -118,7 +52,6 @@ curl -O https://github.com/ankitpokhrel/jira-cli/releases/download/v1.5.2/jira_1
   && tar -zxvf jira_1.5.2_macOS_arm64.tar.gz \
   && mv jira /usr/local/bin/jira \
   && rm jira_1.5.2_macOS_arm64.tar.gz
-
 
 echo 'Restart'
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
