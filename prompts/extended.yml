@@ -269,6 +269,21 @@ blocks:
           type: swift
           style: diamond
         - leading_diamond: 
+          trailing_diamond: 
+          template: >-
+            {{- $now := cmd "timetrap-go" "now" -}}
+            {{- $sheet := regexReplaceAll "^\\*([^:]+):.*$" $now "${1}" -}}
+            {{- $status := regexReplaceAll "^\\*[^:]+:\\s*" $now "" -}}
+            {{- if eq $status "not running" -}}
+              ⏱ {{ $sheet }} ⏸
+            {{- else -}}
+              ⏱ {{ $sheet }} ▶ {{ $status }}
+            {{- end -}}
+          foreground: '#ffffff'
+          background: '#fe562e'
+          type: text
+          style: diamond
+        - leading_diamond: 
           trailing_diamond: 
           template:  {{ .CurrentDate | date .Format }}
           foreground: '#d6deeb'

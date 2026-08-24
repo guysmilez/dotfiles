@@ -14,6 +14,7 @@ export PATH="$HOME/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 export PATH=/Users/markhorlbeck/.grok/bin:$PATH
+export PATH="$HOME/.rustup/toolchains/stable-aarch64-apple-darwin/bin:$PATH"
 
 # Xdebug...
 export XDEBUG_CONFIG="idekey=VSCODE"

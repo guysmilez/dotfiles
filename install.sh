@@ -1,8 +1,8 @@
 #!/bin/bash
 
 SOURCEPATH="$HOME/Code/dotfiles"
-BREW_APPS=(autojump bat direnv fzf httpie mole ncdu oh-my-posh pkg-config prettyping ripgrep stats tmux zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
-BREW_CASKS=(font-0xproto-nerd-font bettercmdtab devutils ghostty openlogi scroll-reverser tinycast)
+BREW_APPS=(autojump bat direnv fzf httpie mole ncdu oh-my-posh pkg-config prettyping ripgrep stats syntax-highlight tmux zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
+BREW_CASKS=(font-0xproto-nerd-font bettercmdtab devutils ghostty obsidian openlogi scroll-reverser tinycast)
 
 # Install zsh
 echo 'Install oh-my-zsh'
