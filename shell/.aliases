@@ -42,3 +42,6 @@ alias sb="~/Code/bin/slack presence active --filter \".ok\" && ~/Code/bin/slack 
 
 # Hledger...
 alias h="hledger"
+
+# Timetrap...
+alias t="timetrap-go"

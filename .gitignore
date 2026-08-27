@@ -2,3 +2,4 @@
 .locals
 vscode
 bin/jira
+.direnv

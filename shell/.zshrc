@@ -89,7 +89,6 @@ fi
 
 # Keys, etc...
 source $BASE/shell/.locals
-source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 # # append completions to fpath
 # fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
