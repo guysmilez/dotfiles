@@ -1,0 +1,1060 @@
+# theme.yml
+#
+# SynthWave '84
+# https://github.com/robb0wen/synthwave-vscode
+#
+# Designed for dark terminals.
+#
+# Palette:
+#   background      #262335  (terminal background; not set by eza)
+#   foreground      #f0eff1
+#   pink            #ff7edb
+#   cyan            #03edf9
+#   bright_cyan     #36f9f6
+#   green           #72f1b8
+#   yellow          #fede5d
+#   red             #fe4450
+#   orange          #ff8b39
+#   purple          #c792ea
+#   blue            #848bbd
+#   dim             #7b6a98
+
+colourful: true
+
+filekinds:
+  normal:
+    foreground: "#f0eff1"
+
+  directory:
+    foreground: "#36f9f6"
+    is_bold: true
+
+  symlink:
+    foreground: "#ff7edb"
+    is_italic: true
+
+  pipe:
+    foreground: "#848bbd"
+
+  block_device:
+    foreground: "#fede5d"
+
+  char_device:
+    foreground: "#fede5d"
+
+  socket:
+    foreground: "#ff7edb"
+
+  special:
+    foreground: "#c792ea"
+
+  executable:
+    foreground: "#72f1b8"
+    is_bold: true
+
+  mount_point:
+    foreground: "#36f9f6"
+    is_bold: true
+
+perms:
+  user_read:
+    foreground: "#36f9f6"
+
+  user_write:
+    foreground: "#fede5d"
+
+  user_execute_file:
+    foreground: "#72f1b8"
+
+  user_execute_other:
+    foreground: "#72f1b8"
+
+  group_read:
+    foreground: "#03edf9"
+
+  group_write:
+    foreground: "#fede5d"
+
+  group_execute:
+    foreground: "#72f1b8"
+
+  other_read:
+    foreground: "#03edf9"
+
+  other_write:
+    foreground: "#fede5d"
+
+  other_execute:
+    foreground: "#72f1b8"
+
+  special_user_file:
+    foreground: "#ff7edb"
+
+  special_other:
+    foreground: "#fe4450"
+
+  attribute:
+    foreground: "#7b6a98"
+
+size:
+  major:
+    foreground: "#c792ea"
+
+  minor:
+    foreground: "#848bbd"
+
+  number_byte:
+    foreground: "#f0eff1"
+
+  number_kilo:
+    foreground: "#03edf9"
+
+  number_mega:
+    foreground: "#36f9f6"
+
+  number_giga:
+    foreground: "#c792ea"
+
+  number_huge:
+    foreground: "#ff7edb"
+
+  unit_byte:
+    foreground: "#7b6a98"
+
+  unit_kilo:
+    foreground: "#03edf9"
+
+  unit_mega:
+    foreground: "#36f9f6"
+
+  unit_giga:
+    foreground: "#c792ea"
+
+  unit_huge:
+    foreground: "#ff7edb"
+
+users:
+  user_you:
+    foreground: "#72f1b8"
+    is_bold: true
+
+  user_root:
+    foreground: "#fe4450"
+    is_bold: true
+
+  user_other:
+    foreground: "#c792ea"
+
+  group_yours:
+    foreground: "#03edf9"
+
+  group_other:
+    foreground: "#848bbd"
+
+  group_root:
+    foreground: "#fe4450"
+
+links:
+  normal:
+    foreground: "#ff7edb"
+
+  multi_link_file:
+    foreground: "#c792ea"
+
+git:
+  new:
+    foreground: "#72f1b8"
+
+  modified:
+    foreground: "#fede5d"
+
+  deleted:
+    foreground: "#fe4450"
+
+  renamed:
+    foreground: "#03edf9"
+
+  typechange:
+    foreground: "#c792ea"
+
+  ignored:
+    foreground: "#7b6a98"
+    is_dimmed: true
+
+  conflicted:
+    foreground: "#ff7edb"
+    is_bold: true
+
+git_repo:
+  branch_main:
+    foreground: "#03edf9"
+    is_bold: true
+
+  branch_other:
+    foreground: "#c792ea"
+
+  git_clean:
+    foreground: "#72f1b8"
+
+  git_dirty:
+    foreground: "#ff7edb"
+    is_bold: true
+
+security_context:
+  colon:
+    foreground: "#7b6a98"
+
+  user:
+    foreground: "#03edf9"
+
+  role:
+    foreground: "#c792ea"
+
+  typ:
+    foreground: "#7b6a98"
+
+  range:
+    foreground: "#ff7edb"
+
+file_type:
+  image:
+    foreground: "#ff7edb"
+
+  video:
+    foreground: "#fe4450"
+
+  music:
+    foreground: "#c792ea"
+
+  lossless:
+    foreground: "#ff7edb"
+
+  crypto:
+    foreground: "#fede5d"
+
+  document:
+    foreground: "#03edf9"
+
+  compressed:
+    foreground: "#ff8b39"
+
+  temp:
+    foreground: "#7b6a98"
+    is_dimmed: true
+
+  compiled:
+    foreground: "#72f1b8"
+
+  build:
+    foreground: "#fede5d"
+
+  source:
+    foreground: "#36f9f6"
+
+punctuation:
+  foreground: "#7b6a98"
+
+date:
+  foreground: "#c792ea"
+
+inode:
+  foreground: "#7b6a98"
+
+blocks:
+  foreground: "#7b6a98"
+
+header:
+  foreground: "#ff7edb"
+  is_bold: true
+
+octal:
+  foreground: "#03edf9"
+
+flags:
+  foreground: "#c792ea"
+
+symlink_path:
+  foreground: "#ff7edb"
+  is_italic: true
+
+control_char:
+  foreground: "#fe4450"
+
+broken_symlink:
+  foreground: "#fe4450"
+  is_bold: true
+
+broken_path_overlay:
+  foreground: "#fe4450"
+
+# ---------------------------------------------------------------------------
+# Developer file overrides
+# ---------------------------------------------------------------------------
+
+extensions:
+
+  # -------------------------------------------------------------------------
+  # Go
+  # -------------------------------------------------------------------------
+
+  "go":
+    filename:
+      foreground: "#03edf9"
+
+  "mod":
+    filename:
+      foreground: "#36f9f6"
+
+  "sum":
+    filename:
+      foreground: "#7b6a98"
+
+  "work":
+    filename:
+      foreground: "#36f9f6"
+
+  # -------------------------------------------------------------------------
+  # Rust
+  # -------------------------------------------------------------------------
+
+  "rs":
+    filename:
+      foreground: "#ff8b39"
+
+  "rlib":
+    filename:
+      foreground: "#ff8b39"
+
+  # -------------------------------------------------------------------------
+  # C / C++
+  # -------------------------------------------------------------------------
+
+  "c":
+    filename:
+      foreground: "#03edf9"
+
+  "h":
+    filename:
+      foreground: "#03edf9"
+
+  "cc":
+    filename:
+      foreground: "#03edf9"
+
+  "cpp":
+    filename:
+      foreground: "#03edf9"
+
+  "cxx":
+    filename:
+      foreground: "#03edf9"
+
+  "hpp":
+    filename:
+      foreground: "#03edf9"
+
+  # -------------------------------------------------------------------------
+  # Python
+  # -------------------------------------------------------------------------
+
+  "py":
+    filename:
+      foreground: "#fede5d"
+
+  "pyw":
+    filename:
+      foreground: "#fede5d"
+
+  "pyi":
+    filename:
+      foreground: "#c792ea"
+
+  "pyc":
+    filename:
+      foreground: "#7b6a98"
+
+  "pyo":
+    filename:
+      foreground: "#7b6a98"
+
+  # -------------------------------------------------------------------------
+  # Java / JVM
+  # -------------------------------------------------------------------------
+
+  "java":
+    filename:
+      foreground: "#fe4450"
+
+  "kt":
+    filename:
+      foreground: "#c792ea"
+
+  "kts":
+    filename:
+      foreground: "#c792ea"
+
+  "scala":
+    filename:
+      foreground: "#fe4450"
+
+  "clj":
+    filename:
+      foreground: "#72f1b8"
+
+  "groovy":
+    filename:
+      foreground: "#72f1b8"
+
+  # -------------------------------------------------------------------------
+  # JavaScript / TypeScript
+  # -------------------------------------------------------------------------
+
+  "js":
+    filename:
+      foreground: "#fede5d"
+
+  "jsx":
+    filename:
+      foreground: "#fede5d"
+
+  "mjs":
+    filename:
+      foreground: "#fede5d"
+
+  "cjs":
+    filename:
+      foreground: "#fede5d"
+
+  "ts":
+    filename:
+      foreground: "#36f9f6"
+
+  "tsx":
+    filename:
+      foreground: "#36f9f6"
+
+  "mts":
+    filename:
+      foreground: "#36f9f6"
+
+  "cts":
+    filename:
+      foreground: "#36f9f6"
+
+  # -------------------------------------------------------------------------
+  # Web
+  # -------------------------------------------------------------------------
+
+  "html":
+    filename:
+      foreground: "#fe4450"
+
+  "htm":
+    filename:
+      foreground: "#fe4450"
+
+  "css":
+    filename:
+      foreground: "#84abfd"
+
+  "scss":
+    filename:
+      foreground: "#ff7edb"
+
+  "sass":
+    filename:
+      foreground: "#ff7edb"
+
+  "less":
+    filename:
+      foreground: "#84abfd"
+
+  "vue":
+    filename:
+      foreground: "#72f1b8"
+
+  "svelte":
+    filename:
+      foreground: "#ff8b39"
+
+  "astro":
+    filename:
+      foreground: "#ff7edb"
+
+  # -------------------------------------------------------------------------
+  # Data / configuration
+  # -------------------------------------------------------------------------
+
+  "json":
+    filename:
+      foreground: "#fede5d"
+
+  "jsonc":
+    filename:
+      foreground: "#fede5d"
+
+  "json5":
+    filename:
+      foreground: "#fede5d"
+
+  "yaml":
+    filename:
+      foreground: "#72f1b8"
+
+  "yml":
+    filename:
+      foreground: "#72f1b8"
+
+  "toml":
+    filename:
+      foreground: "#ff8b39"
+
+  "xml":
+    filename:
+      foreground: "#fe4450"
+
+  "ini":
+    filename:
+      foreground: "#c792ea"
+
+  "conf":
+    filename:
+      foreground: "#c792ea"
+
+  "cfg":
+    filename:
+      foreground: "#c792ea"
+
+  "env":
+    filename:
+      foreground: "#fede5d"
+
+  # -------------------------------------------------------------------------
+  # Kubernetes
+  # -------------------------------------------------------------------------
+
+  "kubeconfig":
+    filename:
+      foreground: "#36f9f6"
+
+  "crd":
+    filename:
+      foreground: "#c792ea"
+
+  "helm":
+    filename:
+      foreground: "#03edf9"
+
+  # -------------------------------------------------------------------------
+  # Infrastructure
+  # -------------------------------------------------------------------------
+
+  "tf":
+    filename:
+      foreground: "#c792ea"
+
+  "tfvars":
+    filename:
+      foreground: "#fede5d"
+
+  "hcl":
+    filename:
+      foreground: "#c792ea"
+
+  "nomad":
+    filename:
+      foreground: "#fe4450"
+
+  # -------------------------------------------------------------------------
+  # Shell
+  # -------------------------------------------------------------------------
+
+  "sh":
+    filename:
+      foreground: "#72f1b8"
+
+  "bash":
+    filename:
+      foreground: "#72f1b8"
+
+  "zsh":
+    filename:
+      foreground: "#72f1b8"
+
+  "fish":
+    filename:
+      foreground: "#36f9f6"
+
+  "ksh":
+    filename:
+      foreground: "#72f1b8"
+
+  "csh":
+    filename:
+      foreground: "#72f1b8"
+
+  "ps1":
+    filename:
+      foreground: "#03edf9"
+
+  "bat":
+    filename:
+      foreground: "#72f1b8"
+
+  "cmd":
+    filename:
+      foreground: "#72f1b8"
+
+  # -------------------------------------------------------------------------
+  # SQL / databases
+  # -------------------------------------------------------------------------
+
+  "sql":
+    filename:
+      foreground: "#c792ea"
+
+  "psql":
+    filename:
+      foreground: "#03edf9"
+
+  "graphql":
+    filename:
+      foreground: "#ff7edb"
+
+  "gql":
+    filename:
+      foreground: "#ff7edb"
+
+  # -------------------------------------------------------------------------
+  # Documentation
+  # -------------------------------------------------------------------------
+
+  "md":
+    filename:
+      foreground: "#36f9f6"
+
+  "markdown":
+    filename:
+      foreground: "#36f9f6"
+
+  "mdx":
+    filename:
+      foreground: "#36f9f6"
+
+  "rst":
+    filename:
+      foreground: "#03edf9"
+
+  "adoc":
+    filename:
+      foreground: "#03edf9"
+
+  "txt":
+    filename:
+      foreground: "#f0eff1"
+
+  # -------------------------------------------------------------------------
+  # CI/CD
+  # -------------------------------------------------------------------------
+
+  "jenkinsfile":
+    filename:
+      foreground: "#fe4450"
+
+  "pipeline":
+    filename:
+      foreground: "#fe4450"
+
+  # -------------------------------------------------------------------------
+  # Protocol / API definitions
+  # -------------------------------------------------------------------------
+
+  "proto":
+    filename:
+      foreground: "#c792ea"
+
+  "avsc":
+    filename:
+      foreground: "#fede5d"
+
+  # -------------------------------------------------------------------------
+  # Compiled / generated
+  # -------------------------------------------------------------------------
+
+  "o":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  "a":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  "so":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  "dylib":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  "dll":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  "class":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  # -------------------------------------------------------------------------
+  # Archives
+  # -------------------------------------------------------------------------
+
+  "zip":
+    filename:
+      foreground: "#ff8b39"
+
+  "tar":
+    filename:
+      foreground: "#ff8b39"
+
+  "gz":
+    filename:
+      foreground: "#ff8b39"
+
+  "bz2":
+    filename:
+      foreground: "#ff8b39"
+
+  "xz":
+    filename:
+      foreground: "#ff8b39"
+
+  "zst":
+    filename:
+      foreground: "#ff8b39"
+
+  "7z":
+    filename:
+      foreground: "#ff8b39"
+
+  "rar":
+    filename:
+      foreground: "#ff8b39"
+
+  # -------------------------------------------------------------------------
+  # Logs / temporary files
+  # -------------------------------------------------------------------------
+
+  "log":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  "tmp":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  "temp":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  "bak":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  "swp":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+
+# ---------------------------------------------------------------------------
+# Well-known filenames
+# ---------------------------------------------------------------------------
+
+filenames:
+
+  # Git
+  ".gitignore":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  ".gitattributes":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  ".gitmodules":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  ".gitconfig":
+    filename:
+      foreground: "#c792ea"
+
+  ".gitkeep":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+
+  # Docker
+  "Dockerfile":
+    filename:
+      foreground: "#03edf9"
+      is_bold: true
+
+  "docker-compose.yml":
+    filename:
+      foreground: "#03edf9"
+      is_bold: true
+
+  "docker-compose.yaml":
+    filename:
+      foreground: "#03edf9"
+      is_bold: true
+
+  "compose.yml":
+    filename:
+      foreground: "#03edf9"
+      is_bold: true
+
+  "compose.yaml":
+    filename:
+      foreground: "#03edf9"
+      is_bold: true
+
+  ".dockerignore":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+
+  # Go
+  "go.mod":
+    filename:
+      foreground: "#03edf9"
+      is_bold: true
+
+  "go.sum":
+    filename:
+      foreground: "#7b6a98"
+
+  "go.work":
+    filename:
+      foreground: "#36f9f6"
+      is_bold: true
+
+
+  # Rust
+  "Cargo.toml":
+    filename:
+      foreground: "#ff8b39"
+      is_bold: true
+
+  "Cargo.lock":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+
+  # JavaScript / Node
+  "package.json":
+    filename:
+      foreground: "#72f1b8"
+      is_bold: true
+
+  "package-lock.json":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  "yarn.lock":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  "pnpm-lock.yaml":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  "bun.lockb":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  "deno.json":
+    filename:
+      foreground: "#f0eff1"
+
+  "deno.jsonc":
+    filename:
+      foreground: "#f0eff1"
+
+
+  # Kubernetes
+  "Chart.yaml":
+    filename:
+      foreground: "#03edf9"
+      is_bold: true
+
+  "values.yaml":
+    filename:
+      foreground: "#72f1b8"
+
+  "Chart.lock":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+  "kustomization.yaml":
+    filename:
+      foreground: "#c792ea"
+      is_bold: true
+
+  "kustomization.yml":
+    filename:
+      foreground: "#c792ea"
+      is_bold: true
+
+
+  # Terraform
+  "main.tf":
+    filename:
+      foreground: "#c792ea"
+
+  "variables.tf":
+    filename:
+      foreground: "#c792ea"
+
+  "outputs.tf":
+    filename:
+      foreground: "#c792ea"
+
+  "providers.tf":
+    filename:
+      foreground: "#c792ea"
+
+  "terraform.tfvars":
+    filename:
+      foreground: "#fede5d"
+
+  "terraform.tfstate":
+    filename:
+      foreground: "#fe4450"
+      is_dimmed: true
+
+  "terraform.tfstate.backup":
+    filename:
+      foreground: "#7b6a98"
+      is_dimmed: true
+
+
+  # CI/CD
+  "Jenkinsfile":
+    filename:
+      foreground: "#fe4450"
+      is_bold: true
+
+  ".gitlab-ci.yml":
+    filename:
+      foreground: "#ff8b39"
+      is_bold: true
+
+  ".travis.yml":
+    filename:
+      foreground: "#fe4450"
+
+  "azure-pipelines.yml":
+    filename:
+      foreground: "#03edf9"
+      is_bold: true
+
+
+  # GitHub
+  "CODEOWNERS":
+    filename:
+      foreground: "#c792ea"
+
+  "dependabot.yml":
+    filename:
+      foreground: "#72f1b8"
+
+
+  # Documentation
+  "README":
+    filename:
+      foreground: "#36f9f6"
+      is_bold: true
+
+  "README.md":
+    filename:
+      foreground: "#36f9f6"
+      is_bold: true
+
+  "CHANGELOG.md":
+    filename:
+      foreground: "#c792ea"
+
+  "CONTRIBUTING.md":
+    filename:
+      foreground: "#c792ea"
+
+  "LICENSE":
+    filename:
+      foreground: "#fede5d"
+
+  "LICENSE.md":
+    filename:
+      foreground: "#fede5d"
+
+
+  # Build systems
+  "Makefile":
+    filename:
+      foreground: "#fede5d"
+      is_bold: true
+
+  "CMakeLists.txt":
+    filename:
+      foreground: "#03edf9"
+      is_bold: true
+
+  "Justfile":
+    filename:
+      foreground: "#fede5d"
+      is_bold: true
+
+
+  # Environment
+  ".env":
+    filename:
+      foreground: "#fede5d"
+
+  ".env.local":
+    filename:
+      foreground: "#fede5d"
+
+  ".env.development":
+    filename:
+      foreground: "#fede5d"
+
+  ".env.production":
+    filename:
+      foreground: "#fede5d"
+
+  ".env.test":
+    filename:
+      foreground: "#fede5d"

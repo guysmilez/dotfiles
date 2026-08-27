@@ -1,8 +1,9 @@
 #!/bin/bash
 
 SOURCEPATH="$HOME/Code/dotfiles"
-BREW_APPS=(autojump bat direnv fzf httpie mole ncdu oh-my-posh pkg-config prettyping ripgrep stats syntax-highlight tmux zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
-BREW_CASKS=(font-0xproto-nerd-font bettercmdtab devutils ghostty obsidian openlogi scroll-reverser tinycast)
+BREW_APPS=(awscli autojump bat direnv eza fzf gnupg httpie jq mole ncdu oh-my-posh pkg-config prettyping ripgrep stats syntax-highlight tmux yq zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
+BREW_TRUST=(abue-ammar/tinycast)
+BREW_CASKS=(abue-ammar/tinycast/tinycast bettercmdtab bramble devutils font-0xproto-nerd-font font-lato ghostty kitty obsidian openlogi scroll-reverser)
 
 # Install zsh
 echo 'Install oh-my-zsh'
@@ -38,13 +39,10 @@ sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup 2>/dev/null
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Install Homebrew apps...
-brew install "${BREW_APPS[@]}"
-brew install --cask "${BREW_CASKS[@]}"
+/opt/homebrew/bin/brew install "${BREW_APPS[@]}"
+/opt/homebrew/bin/brew trust --tap "${BREW_TRUST[@]}"
+/opt/homebrew/bin/brew install --casks "${BREW_CASKS[@]}"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-echo 'Install some nice quicklook plugins'
-echo '-----------------------------------'
-brew install --force qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package
 
 echo 'Install jira-cli'
 echo '----------------'
@@ -53,8 +51,9 @@ curl -O https://github.com/ankitpokhrel/jira-cli/releases/download/v1.5.2/jira_1
   && mv jira /usr/local/bin/jira \
   && rm jira_1.5.2_macOS_arm64.tar.gz
 
-echo 'Restart'
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+
+touch ~/Code/dotfiles/shell/.locals
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'

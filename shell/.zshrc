@@ -27,6 +27,11 @@ DEFAULT_USER=$(whoami)
 # zstyle ':omz:plugins:nvm' lazy yes
 # zstyle ':omz:plugins:nvm' lazy-cmd eslint vitest
 
+# eza configuration...
+zstyle ':omz:plugins:eza' 'git-status' yes
+zstyle ':omz:plugins:eza' 'icons' yes
+zstyle ':omz:plugins:eza' 'time-style' long-iso
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
