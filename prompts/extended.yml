@@ -51,13 +51,13 @@ blocks:
       alignment: right
       overflow: break
       segments:
-        - leading_diamond: 
-          trailing_diamond: 
-          template: '  {{ .Name }} '
-          foreground: '#011627'
-          background: '#d6deeb'
-          type: shell
-          style: diamond
+        # - leading_diamond: 
+        #   trailing_diamond: 
+        #   template: '  {{ .Name }} '
+        #   foreground: '#011627'
+        #   background: '#d6deeb'
+        #   type: shell
+        #   style: diamond
         - type: nix-shell
           style: powerline
           foreground: blue
@@ -79,13 +79,13 @@ blocks:
           background: '#ffffff'
           type: aurelia
           style: diamond
-        - leading_diamond: 
-          trailing_diamond: 
-          template: ' {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} '
-          foreground: '#faa029'
-          background: '#565656'
-          type: aws
-          style: diamond
+        # - leading_diamond: 
+        #   trailing_diamond: 
+        #   template: ' {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} '
+        #   foreground: '#faa029'
+        #   background: '#565656'
+        #   type: aws
+        #   style: diamond
         - leading_diamond: 
           trailing_diamond: 
           template: ' {{ .EnvironmentName }} '
@@ -191,13 +191,13 @@ blocks:
           background: '#906cff'
           type: kotlin
           style: diamond
-        - leading_diamond: 
-          trailing_diamond: 
-          template:  {{if .Namespace}}{{.Namespace}}{{else}}default{{end}}
-          foreground: '#ffffff'
-          background: '#316ce4'
-          type: kubectl
-          style: diamond
+        # - leading_diamond: 
+        #   trailing_diamond: 
+        #   template:  {{if .Namespace}}{{.Namespace}}{{else}}default{{end}}
+        #   foreground: '#ffffff'
+        #   background: '#316ce4'
+        #   type: kubectl
+        #   style: diamond
         - leading_diamond: 
           trailing_diamond: 
           template: ' {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} '
@@ -205,13 +205,13 @@ blocks:
           background: '#ffffff'
           type: lua
           style: diamond
-        - leading_diamond: 
-          trailing_diamond: 
-          template:  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}
-          foreground: '#3C873A'
-          background: '#303030'
-          type: node
-          style: diamond
+        # - leading_diamond: 
+        #   trailing_diamond: 
+        #   template:  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}
+        #   foreground: '#3C873A'
+        #   background: '#303030'
+        #   type: node
+        #   style: diamond
         - leading_diamond: 
           trailing_diamond: 
           template: 'Nx {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} '
@@ -272,12 +272,12 @@ blocks:
           trailing_diamond: 
           template: >-
             {{- $now := cmd "timetrap-go" "now" -}}
-            {{- $sheet := regexReplaceAll "^\\*([^:]+):.*$" $now "${1}" -}}
+            {{- $sheet := regexReplaceAll "^\\*([^:]{0,3})[^:]*:.*$" $now "${1}" -}}
             {{- $status := regexReplaceAll "^\\*[^:]+:\\s*" $now "" -}}
             {{- if eq $status "not running" -}}
-              ⏱ {{ $sheet }} ⏸
+              ⏱ {{ $sheet }}{{ if regexMatch "^\\*[^:]{4,}:" $now }}...{{ end }} ⏸
             {{- else -}}
-              ⏱ {{ $sheet }} ▶ {{ $status }}
+              ⏱ {{ $sheet }}{{ if regexMatch "^\\*[^:]{4,}:" $now }}...{{ end }} ▶ {{ $status }}
             {{- end -}}
           foreground: '#ffffff'
           background: '#fe562e'
