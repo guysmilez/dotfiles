@@ -1,9 +1,7 @@
 #!/bin/bash
 
 SOURCEPATH="$HOME/Code/dotfiles"
-BREW_APPS=(awscli autojump bat direnv eza fzf gnupg httpie jq mole ncdu oh-my-posh pkg-config prettyping ripgrep stats syntax-highlight tmux yq zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
 BREW_TRUST=(abue-ammar/tinycast)
-BREW_CASKS=(abue-ammar/tinycast/tinycast bettercmdtab bramble devutils font-0xproto-nerd-font font-lato ghostty kitty obsidian openlogi scroll-reverser)
 
 # Install zsh
 echo 'Install oh-my-zsh'
@@ -39,9 +37,8 @@ sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup 2>/dev/null
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Install Homebrew apps...
-/opt/homebrew/bin/brew install "${BREW_APPS[@]}"
 /opt/homebrew/bin/brew trust --tap "${BREW_TRUST[@]}"
-/opt/homebrew/bin/brew install --casks "${BREW_CASKS[@]}"
+/opt/homebrew/bin/brew bundle --file="$SOURCEPATH/Brewfile"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 echo 'Install jira-cli'
