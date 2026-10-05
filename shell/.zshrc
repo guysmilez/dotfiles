@@ -64,7 +64,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Load the shell dotfiles, and then some:
-# * ~/.extra can be used for other settings you don’t want to commit.
 for file in $BASE/shell/.{exports,aliases,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
@@ -88,7 +87,7 @@ fi
 [[ -f ~/.fzf.zsh ]]  && source ~/.fzf.zsh
 
 # Keys, etc...
-source $BASE/shell/.locals
+[ -r "$file" ] && [ -f "$file" ] && source $BASE/shell/.locals
 
 # # append completions to fpath
 # fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
